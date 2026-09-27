@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://djv7skg6svxsj"]
+
+[ext_resource type="Script" uid="uid://be7wxc16e6chw" path="res://scripts/jumpPad_path.gd" id="1_4vk63"]
+[ext_resource type="PackedScene" uid="uid://bb8bs1lc6okge" path="res://scenes/obstacles/jump_pad.tscn" id="2_7k1a2"]
+
+[node name="jumpPad_path" type="Path2D"]
+script = ExtResource("1_4vk63")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+loop = false
+
+[node name="jump_pad" parent="PathFollow2D" instance=ExtResource("2_7k1a2")]
